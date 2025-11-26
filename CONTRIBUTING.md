@@ -1,4 +1,4 @@
-# Contributing to Smart-Travel-CLI
+# Contributing to Cost_Effective_Travel
 
 First off, thank you for considering contributing to Smart-Travel-CLI! 🚀
 We welcome contributions from everyone.
@@ -9,10 +9,10 @@ We welcome contributions from everyone.
 ```bash
 git clone [https://github.com/YOUR-ID/smart-travel-cli.git](https://github.com/YOUR-ID/smart-travel-cli.git)
 cd smart-travel-cli
-``` 
+```
 
-### 2. Set up virual environment
-
+2. Set up Virtual Environment
+```bash
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -20,16 +20,16 @@ venv\Scripts\activate
 # Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
-
-### 3. Install dependencies
-
+```
+3. Install Dependencies
+```bash
 pip install -r requirements.txt
-
-### 4. Environment variables
-
+```
+4. Environment Variables
+Create a .env file in the root directory and add your API Key:
+```plaintext
 EXIM_API_KEY=your_api_key_here
-
-###
+```
 
 📏 Coding Standards
 Language: Python
@@ -59,3 +59,5 @@ Create a new branch: git checkout -b feature/your-feature-name
 Commit your changes.
 
 Push to the branch.
+
+Open a Pull Request using our PR Template.
