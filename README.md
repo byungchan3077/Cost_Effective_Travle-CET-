@@ -1,12 +1,13 @@
-# Project Name: Dr.Strategy
+# Cost_Effective_Travle -CET- ✈️💸
 
 ## 1. Goal & Vision
-* **Goal:** (예: 서울시 지하철 데이터를 활용해 실시간 혼잡도를 알려주는 웹 서비스 개발)
-* **Vision:** (예: 누구나 출근길 스트레스를 줄일 수 있는 오픈 데이터 생태계 조성)
+* **Goal:** Develop a CLI tool that combines real-time exchange rates (Open API) and cost-of-living indices (Open Data) to recommend the most cost-effective travel destinations, maximizing the user's purchasing power within their budget.
+* **Vision:** Transform complex economic data into accessible travel insights, promoting a culture of rational and budget-friendly travel.
 
 ## 2. Tech Stack
-* [cite_start]**Language:** Python (or Java, JS) [cite: 59]
-* **Framework:** Streamlit (or Spring, React)
+* **Language:** Python
+* **Libraries:** pandas (Data Processing), requests (API Calls), argparse (CLI Implementation)
+* **Data Sources:** The Export-Import Bank of Korea Exchange Rate API, Numbeo/Big Mac Index (Cost of Living Data)
 
 ## 3. Governance
 * **License:** MIT License
