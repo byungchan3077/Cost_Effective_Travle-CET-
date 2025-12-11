@@ -1,6 +1,33 @@
 import pandas as pd
 import json
 
+country_map = {
+    "Japan": "JPN",
+    "United States": "USA",
+    "Italy": "ITA",
+    "Spain": "ESP",
+    "Indonesia": "IDN",
+    "Britain": "GBR",
+    "UK": "GBR",
+    "France": "FRA",
+    "Vietnam": "VNM",
+    "Singapore": "SGP",
+    "Thailand": "THA",
+    "Hong Kong": "HKG",
+    "Hongkong": "HKG",
+    "United Arab Emirates": "UAE",
+    "Taiwan": "TWN",
+}
+
+def export_data():
+    try:
+        # ---- Load datasets ----
+        hotel = pd.read_csv("hotel_price_index.csv")
+        starbucks = pd.read_csv("starbucks_drink_index.csv")
+        bigmac = pd.read_csv("big_mac_index.csv")   
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+        return
 # ---- Issue 1 + Issue 2 code ----
 hotel = pd.read_csv("hotel_price_index.csv")
 starbucks = pd.read_csv("starbucks_drink_index.csv")
@@ -23,24 +50,6 @@ bigmac = bigmac.rename(columns={
     "local_price": "bigmac_price"
 })
 bigmac = bigmac[["Country", "bigmac_price"]]
-
-country_map = {
-    "Japan": "JPN",
-    "United States": "USA",
-    "Italy": "ITA",
-    "Spain": "ESP",
-    "Indonesia": "IDN",
-    "Britain": "GBR",
-    "UK": "GBR",
-    "France": "FRA",
-    "Vietnam": "VNM",
-    "Singapore": "SGP",
-    "Thailand": "THA",
-    "Hong Kong": "HKG",
-    "Hongkong": "HKG",
-    "United Arab Emirates": "UAE",
-    "Taiwan": "TWN",
-}
 
 hotel["Country"] = hotel["Country"].replace(country_map)
 starbucks["Country"] = starbucks["Country"].replace(country_map)
@@ -66,3 +75,6 @@ print(json.dumps(result, indent=4, ensure_ascii=False))
 # Optionally: save to file
 with open("result.json", "w", encoding="utf-8") as f:
     json.dump(result, f, indent=4, ensure_ascii=False)
+
+if __name__ == "__main__":
+    export_data()
