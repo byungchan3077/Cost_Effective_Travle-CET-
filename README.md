@@ -12,7 +12,7 @@
 
 ## 2. Key Features
 * **🌍 Real-time Financial Analysis:** Fetches live exchange rates and compares them with **1-year moving averages** to identify undervalued currencies (Discounted Rates).
-* **🍔 Survival Basket Logic:** Calculates the minimum daily living cost based on real-world metrics: **3 Big Macs + 2 Starbucks Lattes + Daily Rent**.
+* **🍔 Survival Basket Logic:** Calculates the minimum daily living cost based on real-world metrics: **3 Big Macs + 2 starbucks americano + hotel(for one day)**.
 * **📊 Purchasing Power Index (PPI):** Generates a standardized score (Baseline: 100).
     * **Score > 100:** You are "Rich" (Budget > Survival Cost).
     * **Score < 100:** You are "Poor" (Budget < Survival Cost).
@@ -22,12 +22,12 @@
 ## 3. How It Works (The Logic)
 Our algorithm doesn't just look for cheap prices. It looks for **Value**.
 
-> **Final Score = ( Daily Budget / Adjusted Survival Cost ) * 100**
+> **Final Score = ( Daily Budget / Adjusted Survival Cost ) **
 
 1.  **Daily Budget:** Your Total Budget / Travel Duration.
 2.  **Local Survival Basket (LSB):** Minimum cost to survive a day in local currency.
 3.  **Rate Index (R):** Checks if the currency is cheaper than usual (Discount Factor).
-4.  **Result:** If the score is **150**, it means you have **1.5x** the money needed for a comfortable life.
+4.  **Result:** If the score is **1.5**, it means you have **1.5x** the money needed for a comfortable life.
 
 *(For detailed formulas, please check our [Wiki - Algorithm Logic](https://github.com/YOUR-ID/Cost_Effective_Travel/wiki/Algorithm-Logic))*
 
